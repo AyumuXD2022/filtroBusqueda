@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input [(ngModel)]="filtrarNombre" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" (input)="onFiltroPalabraChange()">
+  </div>
+  <div *ngIf="noResultados" class="alert alert-danger text-center" role="alert">
+    No se encontraron resultados.
+</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>apellido</th>
+        <th>edad</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let persona of personas">
+        <td>{{persona._id}}</td>
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.apellido}}</td>
+        <td>{{persona.edad}}</td>
+        <td>{{persona.email}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

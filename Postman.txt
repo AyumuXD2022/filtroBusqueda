@@ -1,0 +1,7 @@
+http://localhost:5001/api/create/persona
+{
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 30,
+    "email": "juan.perez@example.com"
+}
